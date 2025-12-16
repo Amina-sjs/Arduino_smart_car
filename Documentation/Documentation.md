@@ -19,6 +19,7 @@ This document provides a **comprehensive technical description** of the **Autono
 | **Motor Driver** | L298N H-Bridge Driver | Controls power and direction for two DC motors |
 | **Distance Sensor** | HC-SR04 Ultrasonic Sensor | Obstacle detection |
 | **Display** | OLED Display (128x64, I2C) | Visualizes status and distance data |
+| **Buzzer** | Passive or Active Buzzer | **Audible alarm** upon collision threat |
 | **Motors** | $2 \times$ DC geared motors | Actuation mechanism (requires external power) |
 | **Power Supply** | External Power Supply (7-12V) | For L298N and motors |
 
@@ -53,7 +54,7 @@ The OLED display provides critical real-time feedback to the user regarding the 
 | Operational Status | Display Content (Code: `showEmotion`) | Key Information |
 | :--- | :--- | :--- |
 | **Moving Forward** | Large: `^_^` Small: `FWD! Dist: [XX] cm` | Confirms movement, shows current distance. |
-| **Stopped (Alarm)** | Large: `:(` Small: `STOP! Obstacle. [XX] cm` | Confirms stop state, shows distance to obstacle. |
+| **Stopped (Alarm)** | Large: `:(` Small: `STOP! Obstacle. [XX] cm` | Confirms stop state, shows distance to obstacle, **Buzzer is active.** |
 
 ### 2.4 3D Models
 
@@ -72,7 +73,7 @@ While a pre-built chassis was used, custom components were designed using **Tink
 
 Strict adherence to the following pinout is essential for successful project replication.
 
-![Схема](../Images/11.jpg)
+![Wiring Diagram](../Images/11.jpg)
 
 ### 3.1 L298N Motor Driver Connection (Motor B)
 
@@ -102,7 +103,25 @@ The code uses pins for controlling one motor (Motor B). If two motors are used, 
 | SDA (Data) | Analog Pin **A4** | I2C Data |
 | VCC / GND | **5V / GND** | Power |
 
+### 3.4 Buzzer Connection
+
+The buzzer is connected to a standard digital output pin to provide an audible alarm when the robot stops.
+
+| **Buzzer Pin** | **Arduino Pin** | **Code Variable** | **Function** |
+| :--- | :--- | :--- | :--- |
+| Positive (+) | Digital Pin **9** | `buzzerPin` | Alarm Signal Output |
+| Negative (-) | GND | - | Common Ground |
+
+#### 3.4.1 Wiring Diagram Supplement (Buzzer Wiring)
+
+As the buzzer is not present on the main wiring diagram, use the following instructions for its connection:
+
+1.  The **Positive pin (+) of the buzzer** must be connected to **Digital Pin 9** on the Arduino UNO.
+2.  The **Negative pin (-) of the buzzer** must be connected to any **GND** (Ground) pin on the Arduino UNO or to the common ground rail.
+
+
 ---
+
 
 ## 4. Power Requirements
 
@@ -130,7 +149,7 @@ The code implements the autonomous movement logic with a stopping threshold of *
 | Condition | Distance | Motor Action | Visual Feedback |
 | :--- | :--- | :--- | :--- |
 | **Move Forward** | $> 15\text{ cm}$ (or 0) | `moveCar("forward")` | `showEmotion("happy", dist)`: Smiley `^_^` |
-| **Stop (Alarm)** | $\le 15\text{ cm}$ | `moveCar("stop")` | `showEmotion("scared", dist)`: Smiley `:( ` and `STOP! Obstacle.` |
+| **Stop (Alarm)** | $\le 15\text{ cm}$ | `moveCar("stop")` | `showEmotion("scared", dist)`: Smiley `:( ` and `STOP! Obstacle.` **Activate Buzzer.** |
 
 ### 6.2 Motor Control (Function `moveCar()`)
 
@@ -150,4 +169,4 @@ Considering further project development, the following improvements are recommen
 
 1.  **Full Autonomy (Phase 2):** Implement "Back-up and Turn" logic within the stopping block to ensure continuous movement and obstacle navigation, rather than a simple stop.
 2.  **Smooth Movement:** Implement a **PID controller** for calibration and balancing the speed between the two motors, preventing unintentional drifting.
-3.  **Enhanced QC:** Introduce a mandatory testing
+3.  **Enhanced QC:** Introduce a mandatory testing phase for all electronic components before assembly to minimize development downtime caused by faulty parts.
