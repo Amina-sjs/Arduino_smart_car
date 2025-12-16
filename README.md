@@ -4,9 +4,9 @@
 
 This repository contains an **Autonomous Smart Car** mobile platform built on Arduino UNO, designed to demonstrate robust **Collision Avoidance** logic using the HC-SR04 ultrasonic sensor.
 
-![Схема](../Images/3.jpg)
+![Схема](Images/3.jpg)
 
-![Схема](../Images/4.jpg)
+![Схема](Images/4.jpg)
 
 This project serves as a **complementary implementation** to our main work: [Arduino_Auto-Car](https://github.com/Amina-sjs/Arduino_Auto-Car).
 
@@ -40,9 +40,9 @@ The system implements the "Move $\leftrightarrow$ Stop" logic based on real-time
 
 ![Схема](Images/12.jpg)
 
-The structure, including custom mounts for sensors and the display, was designed using **TinkerCAD**. Model files for 3D printing are available in the folder [`/3d_models`](../model).
+The structure, including custom mounts for sensors and the display, was designed using **TinkerCAD**. Model files for 3D printing are available in the folder [`/3d_models`](3D_Models/model.md).
 
-* **TinkerCAD Model Link:** [INSERT YOUR TINKERCAD MODEL LINK OR IMAGE HERE]
+* **TinkerCAD Model Link:** [https://www.tinkercad.com/things/1LhHMPe5pUA-fiiin?sharecode=-o8NtV5vDrTe1A9Cbz-LPhXvqe7OT9cr3gdRrG44W_s]
 
 ### 4.2 Wiring Diagram
 
