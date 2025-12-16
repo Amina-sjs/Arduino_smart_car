@@ -59,10 +59,10 @@ The OLED display provides critical real-time feedback to the user regarding the 
 ![Вид на олед](../Images/1.jpg)
 
 
-| Operational Status | Display Content (Code: `showEmotion`) | Key Information | Image Example |
-| :--- | :--- | :--- | :--- |
-| **Moving Forward** | Large: `^_^` Small: `FWD! Dist: [XX] cm` | Confirms movement, shows current distance. |  |
-| **Stopped (Alarm)** | Large: `:(` Small: `STOP! Obstacle. [XX] cm` | Confirms stop state, shows distance to obstacle. |  |
+| Operational Status | Display Content (Code: `showEmotion`) | Key Information |
+| :--- | :--- | :--- | 
+| **Moving Forward** | Large: `^_^` Small: `FWD! Dist: [XX] cm` | Confirms movement, shows current distance. 
+| **Stopped (Alarm)** | Large: `:(` Small: `STOP! Obstacle. [XX] cm` | Confirms stop state, shows distance to obstacle. 
 
 
 ### 3. Wiring Diagrams and Electrical Connections
@@ -110,10 +110,10 @@ While a pre-built chassis was used, custom components were designed using **Tink
 ![Схема](../Images/12.jpg)
 
 
-| Component | Purpose | Location in Repository |
-| :--- | :--- | :--- |
-| **HC-SR04 Mount** | Securely holds the ultrasonic sensor at the front of the platform for stable readings. | `3d_models/HC_SR04_Mount.stl` |
-| **OLED Frame/Holder** | Provides a clean, aesthetic housing and ensures display visibility on the chassis. | `3d_models/OLED_Frame.stl` |
+| Component | Purpose | 
+| :--- | :--- | 
+| **HC-SR04 Mount** | Securely holds the ultrasonic sensor at the front of the platform for stable readings. |
+| **OLED Frame/Holder** | Provides a clean, aesthetic housing and ensures display visibility on the chassis. | 
 
 
 ### 4. Software and Libraries
