@@ -1,4 +1,4 @@
-## ⚙️ TECHNICAL DOCUMENTATION: Autonomous Smart Car (Collision Avoidance)
+## TECHNICAL DOCUMENTATION: Autonomous Smart Car (Collision Avoidance)
 
 ### 1. Overview
 
@@ -32,7 +32,7 @@ To facilitate replication and understanding of the assembled platform, the physi
 Shows the layout of the main microcontroller, motor shield, and the ultrasonic sensor mounted on the servo motor.
 
 
-![Вид на олед](Images/4.jpg)
+![Вид на олед](../Images/4.jpg)
 
 
 ##### Top View
@@ -40,7 +40,7 @@ Shows the layout of the main microcontroller, motor shield, and the ultrasonic s
 This view demonstrates the arrangement of the main electronics, including the Arduino Uno, the L298N driver, and the placement of the HC-SR04 and OLED display.
 
 
-![Вид на олед](Images/8.jpg)
+![Вид на олед](../Images/8.jpg)
 
 
 ##### Bottom View
@@ -48,7 +48,7 @@ This view demonstrates the arrangement of the main electronics, including the Ar
 This view shows the positioning of the DC motors, wheels, and any required internal wiring or bracing.
 
 
-![Вид на олед](Images/10.jpg)
+![Вид на олед](../Images/10.jpg)
 
 
 #### 2.4 OLED Display Visualization
@@ -56,7 +56,7 @@ This view shows the positioning of the DC motors, wheels, and any required inter
 The OLED display provides critical real-time feedback to the user regarding the robot's operational status and distance readings.
 
 
-![Вид на олед](Images/1.jpg)
+![Вид на олед](../Images/1.jpg)
 
 
 | Operational Status | Display Content (Code: `showEmotion`) | Key Information | Image Example |
@@ -70,7 +70,7 @@ The OLED display provides critical real-time feedback to the user regarding the 
 Strict adherence to the following pinout is essential for successful project replication.
 
 
-![Схема](Images/11.jpg)
+![Схема](../Images/11.jpg)
 
 
 #### 3.1 L298N Motor Driver Connection (Motor B)
@@ -107,7 +107,7 @@ The code uses pins for controlling one motor (Motor B). If two motors are used, 
 While a pre-built chassis was used, custom components were designed using **Tinkercad** to ensure precise mounting and integration of the sensors and display.
 
 
-![Схема](Images/12.jpg)
+![Схема](../Images/12.jpg)
 
 
 | Component | Purpose | Location in Repository |
