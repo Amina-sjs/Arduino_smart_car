@@ -1,4 +1,4 @@
-# Autonomous Smart Car: Collision Avoidance System (L298N & HC-SR04)
+# Autonomous Smart Car
 
 ## 1. Project Overview
 
@@ -38,7 +38,7 @@ The system implements the "Move $\leftrightarrow$ Stop" logic based on real-time
 
 ### 4.1 3D Model
 
-![Схема](../Images/12.jpg)
+![Схема](Images/12.jpg)
 
 The structure, including custom mounts for sensors and the display, was designed using **TinkerCAD**. Model files for 3D printing are available in the folder [`/3d_models`](../model).
 
@@ -48,7 +48,7 @@ The structure, including custom mounts for sensors and the display, was designed
 
 The complete wiring scheme for all electronic components is provided below. **Note:** The L298N requires a **separate external power supply** (7-12V) for the motors.
 
-![Схема](./Images/6.jpg)
+![Схема](Images/6.jpg)
 
 * *For full pinout details and connection tables, refer to the [Documentation.md] file.*
 
@@ -56,7 +56,7 @@ The complete wiring scheme for all electronic components is provided below. **No
 
 A demonstration of the robot operating in the autonomous collision avoidance mode:
 
-* **YouTube Link:** [INSERT YOUR YOUTUBE VIDEO LINK HERE]
+* **YouTube Link:** [https://youtube.com/shorts/squ-W640RpE?si=pAnp1GUBc01ee6Xv]
 
 ## 5. Challenges Encountered
 
